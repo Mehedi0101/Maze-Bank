@@ -7,4 +7,5 @@ loginButton.addEventListener('click',function(){
     else{
         invalidText.classList.remove('hidden');
     }
+    
 })

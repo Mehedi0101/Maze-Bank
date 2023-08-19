@@ -27,29 +27,37 @@
         <div class="my-10 grid sm:grid-cols-3 grid-cols-1 md:gap-10 gap-2 text-white rounded-lg lg:text-2xl md:text-xl text-base font-medium">
             <div class="xl:px-16 lg:px-10 md:px-6 px-2 py-8 bg-green-500 md:text-left text-center rounded-lg">
                 <p>Deposit</p>
-                <p>$<span>00</span></p>
+                <p>$<span id="deposit-amount">0.00</span></p>
             </div>
             <div class="xl:px-16 lg:px-10 md:px-6 px-2 py-8 bg-fuchsia-500 md:text-left text-center rounded-lg">
                 <p>Withdraw</p>
-                <p>$<span>00</span></p>
+                <p>$<span id="withdraw-amount">0.00</span></p>
             </div>
             <div class="xl:px-16 lg:px-10 md:px-6 px-2 py-8 bg-sky-500 md:text-left text-center rounded-lg">
                 <p>Balance</p>
-                <p>$<span>1240</span></p>
+                <p>$<span id="balance-amount">1240.00</span></p>
             </div>
         </div>
         <div class="flex lg:flex-row flex-col justify-between gap-10">
             <div class="p-10 bg-white rounded-lg flex-1 space-y-4">
                 <h2 class="md:text-2xl text-xl font-medium">Please Deposit</h2>
-                <input type="text" class="block w-full mx-auto px-4 py-2 lg:text-base text-sm bg-gray-200 rounded-lg" placeholder="$ Deposit Amount">
-                <button class="block w-full mx-auto py-2 bg-green-500 hover:bg-white md:text-lg text-base font-medium text-white hover:text-green-500 border-2 border-transparent hover:border-green-500 rounded-lg transition-colors duration-300">Deposit</button>
+                <input type="text" class="block w-full mx-auto px-4 py-2 lg:text-base text-sm bg-gray-200 rounded-lg" id='deposit-field' placeholder="$ Deposit Amount">
+                <button id="deposit-button" class="block w-full mx-auto py-2 bg-green-500 hover:bg-white md:text-lg text-base font-medium text-white hover:text-green-500 border-2 border-transparent hover:border-green-500 rounded-lg transition-colors duration-300">Deposit</button>
+                <p class="mx-auto md:text-sm text-xs text-red-600 hidden" id="invalid-deposit">*Enter a valid amount</p>
             </div>
             <div class="p-10 bg-white rounded-lg flex-1 space-y-4">
                 <h2 class="md:text-2xl text-xl font-medium">Please Withdraw</h2>
-                <input type="text" class="block w-full mx-auto px-4 py-2 lg:text-base text-sm bg-gray-200 rounded-lg" placeholder="$ Withdraw Amount">
-                <button class="block w-full mx-auto py-2 bg-fuchsia-500 hover:bg-white md:text-lg text-base font-medium text-white hover:text-fuchsia-500 border-2 border-transparent hover:border-fuchsia-500 rounded-lg transition-colors duration-300">Withdraw</button>
+                <input type="text" class="block w-full mx-auto px-4 py-2 lg:text-base text-sm bg-gray-200 rounded-lg" id='withdraw-field' placeholder="$ Withdraw Amount">
+                <button class="block w-full mx-auto py-2 bg-fuchsia-500 hover:bg-white md:text-lg text-base font-medium text-white hover:text-fuchsia-500 border-2 border-transparent hover:border-fuchsia-500 rounded-lg transition-colors duration-300" id="withdraw-button">Withdraw</button>
+                <p class="mx-auto md:text-sm text-xs text-red-600 hidden" id="invalid-withdraw">*Enter a valid amount</p>
+                <p class="mx-auto md:text-sm text-xs text-red-600 hidden" id="insufficient-withdraw">*Insufficient balance</p>
             </div>
         </div>
     </section>   
+
+    <!-- scripts -->
+    <script src="scripts/utlis.js"></script>
+    <script src="scripts/deposit.js"></script>
+    <script src="scripts/withdraw.js"></script>
 </body>
 </html>
