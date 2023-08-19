@@ -1,3 +1,4 @@
-const registerBtn = document.getElementById('register-btn');
-const caEmailField = document.getElementById('ca-email-field');
-const caPasswordField = document.getElementById('ca-password-field');
+const loginButton = document.getElementById('login-btn');
+const emailField = document.getElementById('email-field');
+const passwordField = document.getElementById('password-field');
+const invalidText = document.getElementById('invalid-text');
